@@ -52,6 +52,7 @@ This is some text in a paragraph.
     <li>JavaScript</li>
 </ul>
 <!-- 또는 <ol>: ordered list 이라는 부모 tag를 갖기도 한다 -->
+
 <ol>
     <li>HTML</li>
     <li>CSS</li>
@@ -63,14 +64,58 @@ This is some text in a paragraph.
 <title>WEB1 - html</title>
 
 <!-- Link -->
+<!-- CSS 적용하기 -->
+
+<style>
+    a {
+        color:peru;
+        text-decoration: none;
+    }
+    h1 {
+        font-size:40px;
+        text-align:center;
+    }
+    #active {
+        color:red;
+    }
+    .saw {
+        color:gray;
+    }
+
+</style>
 
 <a href="https://www.w3.org/TR/html51/" target="_blank" title="html5 specification">HyperText Markup Language (HTML)</a>
 
 <h1>WEB</h1>
 <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw" id="2active" style="text-decoration:underline">CSS</a></li>
     <li><a href="3.html">JavaScript</a></li>    
 </ol>
+
+<p>
+    <div id="disqus_thread"></div>
+    <script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web1-9miugkm1rx.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+</p>
+
 </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <h1>
+        Conditional Statement
+    </h1>
+    <h2>
+        Program
+    </h2>
+    <script>
+        document.write("1<br>");
+        document.write("2<br>");
+        document.write("3<br>");
+        document.write("4<br>");
+    </script>
+    <h2>
+        If-True
+    </h2>
+    <script>
+        document.write("1<br>");
+        if(true) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+    <h2>
+        If-True
+    </h2>
+    <script>
+        document.write("1<br>");
+        if(false) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+
+    <!-- TOGGLE -->
+    <input id="night_day" type="button" value="night" onclick="
+    if (document.querySelector('#night_day').value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+    }
+    ">
+
+    <!-- Refactorying -->
+    <input type="button" value="night2" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night2') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day2';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night2';
+    }
+    ">
+</body>
+</html>
